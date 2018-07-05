@@ -17,11 +17,9 @@ public class HelloWorldApplication {
         SpringApplication.run(HelloWorldApplication.class, args);
     }
 
-    @Value("${server.port}")
-    String port;
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
-        return "hi "+name+",i am from port:" +port;
+        return "hi "+name;
     }
 
 }
